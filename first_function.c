@@ -117,7 +117,7 @@ void mnty_pop(stack_t **stack, unsigned int line_number)
  * @line_number: te current line inse the monty bytecode file 
  * Return: nothing
  */
-void mnty_swap(stack_t **stack unsigned int line_number)
+void mnty_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_ *temp;
 
