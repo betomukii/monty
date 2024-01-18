@@ -3,7 +3,7 @@
 /**
  * mnty_mul - multiplies the 2nd top element with the top element of the stack
  * @stack: double pointer to the top node of the stack
- * @line_number - current line in the Monty bytecode file
+ * @line_number: current line in the monty bytecode file
  *
  * Return: nothing
  */

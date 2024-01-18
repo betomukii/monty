@@ -9,7 +9,7 @@
  */
 void (*read_op_func(char *opcode))(stack_t**, unsigned int)
 {
-	instruction_t op_fun[] = {{"push", mnty_push}, {"pall",mnty_pall},
+	instruction_t op_fun[] = {{"push", mnty_push}, {"pall",mnty_pall}, 
 		{"pint", mnty_pint}, {"pop", mnty_pop}, {"swap", mnty_swap},
 		{"add", mnty_add}, {"nop", mnty_nop}, {"sub", mnty_sub},
 		{"div", mnty_div}, {"mul", mnty_mul}, {"mod", mnty_mod},
@@ -34,7 +34,7 @@ void (*read_op_func(char *opcode))(stack_t**, unsigned int)
  *
  * Return: exit on sucess or error upon failing
  */
-int exec_mnty(FILE *file_fd)
+int exec_mnty(FILE *fle_fd)
 {
 	stack_t *stack = NULL;
 	char line[1024];
