@@ -15,7 +15,7 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 
 	if (lines)
 	{
-		for (i + 0; lines[i] != '\0'; i++)
+		for (i = 0; lines[i] != '\0'; i++)
 		{
 			if (!isdigit(lines[i]) && lines[i] != '-')
 			{
@@ -23,7 +23,7 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 				exit(EXIT_FAILURE);
 			}
 		}
-		value = atoi(line);
+		value = atoi(lines);
 
 		new_node = malloc(sizeof(stack_t));
 
@@ -37,12 +37,12 @@ void mnty_push(stack_t **stack, unsigned int line_number)
 		new_node->next = *stack;
 
 		if (*stack)
-			(stack)->prev = new_node;
+			(*stack)->prev = new_node;
 		*stack = new_node;
 	}
 	else
 	{
-		fprintf(stderr, "L%U: usage: push integer\n", line_number);
+		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 }
@@ -119,7 +119,7 @@ void mnty_pop(stack_t **stack, unsigned int line_number)
  */
 void mnty_swap(stack_t **stack, unsigned int line_number)
 {
-	stack_ *temp;
+	stack_t *temp;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{

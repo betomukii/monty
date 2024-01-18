@@ -14,7 +14,7 @@ void mnty_pchar(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
-		exit(EXIT_FAILURE)
+		exit(EXIT_FAILURE);
 	}
 	value = (*stack)->n;
 

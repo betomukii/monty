@@ -9,7 +9,7 @@
  */
 void (*read_op_func(char *opcode))(stack_t**, unsigned int)
 {
-	instruction_t op_fun[] = {{"push", mnty_push}, {"pall",mnty_pall}, 
+	instruction_t op_fun[] = {{"push", mnty_push}, {"pall", mnty_pall},
 		{"pint", mnty_pint}, {"pop", mnty_pop}, {"swap", mnty_swap},
 		{"add", mnty_add}, {"nop", mnty_nop}, {"sub", mnty_sub},
 		{"div", mnty_div}, {"mul", mnty_mul}, {"mod", mnty_mod},
@@ -44,7 +44,7 @@ int exec_mnty(FILE *fle_fd)
 
 	if (fle_fd == NULL)
 	{
-		fprint(stderr, "USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
@@ -59,11 +59,11 @@ int exec_mnty(FILE *fle_fd)
 
 			if (op_func == NULL)
 			{
-				fprint(stderr, "L%u: unknown instructions %s\n", line_number, opcode)
+				fprint(stderr, "L%u: unknown instructions %s\n", line_number, opcode);
 				fclose(fle_fd);
 				exit(EXIT_FAILURE);
 			}
-			opcode(&stack, line_number);
+			op_func(&stack, line_number);
 		}
 	}
 	fclose(fle_fd);
