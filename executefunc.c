@@ -68,7 +68,7 @@ int exec_mnty(FILE *file_fd)
 	}
 	fclose(fle_fd);
 
-	retun (0);
+	return (0);
 
 
 }

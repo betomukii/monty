@@ -114,7 +114,7 @@ void mnty_pop(stack_t **stack, unsigned int line_number)
 /**
  * mnty_swap - function that top 2 elements of the stack
  * @stack: the stack to swap elements
- * @line_number: te current line inse the monty bytecode file 
+ * @line_number: te current line inse the monty bytecode file
  * Return: nothing
  */
 void mnty_swap(stack_t **stack, unsigned int line_number)
