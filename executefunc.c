@@ -15,7 +15,7 @@ void (*read_op_func(char *opcode))(stack_t**, unsigned int)
 		{"div", mnty_div}, {"mul", mnty_mul}, {"mod", mnty_mod},
 		{"pchar", mnty_pchar}, {"pstr", mnty_pstr},
 		{"rotl", mnty_rotl}, {"rotr", mnty_rotr},
-		{"stack", mnty_stack}, {"queue" mnty_queue},
+		{"stack", mnty_stack}, {"queue", mnty_queue},
 		{NULL, NULL}};
 
 	int i;
