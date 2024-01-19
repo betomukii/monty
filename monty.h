@@ -27,7 +27,7 @@ typedef struct stack_s
 {
 	int n;
 	struct stack_s *prev;
-	struct stacks_s *next;
+	struct stack_s *next;
 } stack_t;
 
 /**
