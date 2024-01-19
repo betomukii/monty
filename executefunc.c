@@ -59,7 +59,7 @@ int exec_mnty(FILE *fle_fd)
 
 			if (op_func == NULL)
 			{
-				fprint(stderr, "L%u: unknown instructions %s\n", line_number, opcode);
+				fprintf(stderr, "L%u: unknown instructions %s\n", line_number, opcode);
 				fclose(fle_fd);
 				exit(EXIT_FAILURE);
 			}
